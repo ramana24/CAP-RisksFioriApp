@@ -15,10 +15,12 @@
     "express": "^4"
   },
   "devDependencies": {
-    "sqlite3": "^5.0.4"
+    "@sap/ux-specification": "^1.108.6",
+    "sqlite3": "^5.1.6"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run",
+    "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -50,7 +52,16 @@
       "API_BUSINESS_PARTNER": {
         "kind": "odata-v2",
         "model": "srv\\external\\API_BUSINESS_PARTNER"
+      },
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/my-risks.db"
+        }
       }
     }
-  }
+  },
+  "sapux": [
+    "app/risks"
+  ]
 }
