@@ -44,7 +44,22 @@ Report App : What are the risks that can effect export ?
 Internal API – sap.api.hub
 External API-  how to connect to external API .
 
+------------------------------------------------
 
+Troubleshooting :
+
+CAP  -  Key Steps
+
+Part 1 for CDS generation : 
+
+- npm install 
+- cds watch
+- cds watch --ports 4005    (to change to new port if fails to load due to port unavailability)
+
+ Troubleshoot:
+  https://cap.cloud.sap/docs/advanced/troubleshooting
+
+Part 2 for CAP Deployment :
 
 Snippets 1 :
 
