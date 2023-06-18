@@ -50,27 +50,33 @@
       "require-atomic-updates": "off"
     }
   },
+  "sapux": [
+    "app/risks"
+  ],
   "cds": {
     "requires": {
       "API_BUSINESS_PARTNER": {
-        "kind": "odata-v2",
-        "model": "srv\\external\\API_BUSINESS_PARTNER"
-      },
-      "db": {
-        "kind": "sql",
+        "kind": "odata",
+        "model": "srv/external/API_BUSINESS_PARTNER",
         "credentials": {
-          "database": "db/my-risks.db"
-        }
-      },
-      "[dev]": {
-        "auth": "xsuaa",
+           "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/"
+        },
         "db": {
-          "kind": "hana-cloud"
-        }
-      }
-    }
-  },
-  "sapux": [
-    "app/risks"
-  ]
+          "kind": "sql",
+          "credentials": {
+            "database": "db/my-risks.db"
+          }
+        },
+        "[dev]": {
+          "auth": "xsuaa",
+          "db": {
+            "kind": "hana-cloud"
+          }
+     }
+   } 
+ }
+  
+
+  
+}
 }

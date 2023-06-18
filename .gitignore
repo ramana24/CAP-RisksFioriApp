@@ -7,6 +7,7 @@ default-*.json
 gen/
 node_modules/
 target/
+.env-sample
 *.sqlite
 
 # Web IDE, App Studio
